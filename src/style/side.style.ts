@@ -4,7 +4,7 @@ export const Side = styled.div`
   width: 295px;
   height: 100%;
   color: #fff;
-  padding: 1em 0 1em 2em;
+  padding: 1em 0;
   overflow-y: scroll;
   position: fixed;
   left: 0;
@@ -13,6 +13,8 @@ export const Side = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 90%;
+    margin: auto;
 
     img {
       width: 62px;
@@ -35,7 +37,9 @@ export const Side = styled.div`
 `;
 
 export const List = styled.div`
-  margin: 2em 0 0;
+  width: 90%;
+
+  margin: 2em auto 0;
   .listCon {
     margin-bottom: 2.5em;
   }
