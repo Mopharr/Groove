@@ -1,6 +1,7 @@
 import { Container } from "./style/App.style";
 import SideBar from "../src/components/Sidebar";
 import Board from "../src/components/Board";
+import Loading from "./components/loading";
 import React, { useState } from "react";
 
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <Container>
+        <Loading/>
         <SideBar open={open} togle={togle} />
         <Board togle={togle} />
       </Container>

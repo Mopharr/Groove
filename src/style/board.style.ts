@@ -74,10 +74,6 @@ export const Board = styled.div`
     .input:hover {
       border: 1px solid #d9d9d9;
     }
-    .input:hover .icon {
-      color: #fbba12;
-      transition: all 0.3s ease;
-    }
 
     @media (max-width: 768px) {
       .profile {
@@ -119,7 +115,7 @@ export const Main = styled.div`
     line-height: 34px;
     letter-spacing: 0.04em;
     color: #ffffff;
-    margin: 1em 0 2em .5em;
+    margin: 1em 0 2em 0.5em;
   }
 `;
 
@@ -148,9 +144,9 @@ export const Top = styled.div`
 `;
 
 export const Bottom = styled.div`
-  margin: 1em ;
+  margin: 1em;
 
-  &.bot{
+  &.bot {
     margin-bottom: 4em;
   }
 
@@ -198,7 +194,7 @@ export const Bottom = styled.div`
     .playlistCon {
       position: absolute;
       bottom: 5%;
-      z-index: 11;
+      z-index: 1;
       width: 100%;
       height: 74.92px;
       background: linear-gradient(89.79deg, #ab491c -19.39%, #ddae45 123.38%);
@@ -269,7 +265,7 @@ export const Bottom = styled.div`
     .playlistCon {
       position: absolute;
       bottom: 5%;
-      z-index: 11;
+      z-index: 1;
       width: 100%;
       height: 74.92px;
       background: linear-gradient(89.79deg, #c61522 -19.39%, #030304 123.38%);
@@ -339,7 +335,7 @@ export const Bottom = styled.div`
     .playlistCon {
       position: absolute;
       bottom: 5%;
-      z-index: 11;
+      z-index: 1;
       width: 100%;
       height: 74.92px;
       background: linear-gradient(89.79deg, #3d66a8 -19.39%, #91aac7 123.38%);
@@ -395,7 +391,6 @@ export const Bottom = styled.div`
       width: 1440px;
     }
   }
-
 `;
 
 export const Footer = styled.div`
@@ -403,7 +398,7 @@ export const Footer = styled.div`
 
   @media (max-width: 500px) {
     display: block;
-    height: 108px;
+    height: 78px;
     width: 100%;
     display: flex;
     align-items: center;
