@@ -104,10 +104,8 @@ const App: React.FC<any> = ({ togle }) => {
             </div>
           </div>
         </Bottom>
-        {/* <div className="text"> */}
           <h1>Cheers to the Weekend </h1>
           <span>See More</span>
-        {/* </div> */}
 
         <Bottom className="bot">
           <div className="playlist">
