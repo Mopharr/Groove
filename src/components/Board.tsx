@@ -32,6 +32,7 @@ const App: React.FC<any> = ({ togle }) => {
           <img src="/OmahLay.png" alt="omah" className="pic2" />
         </Top>
         <h1>Welcome Back!</h1>
+        <span>See more</span>
 
         <Bottom className="bottom">
           <div className="playlist">
@@ -103,7 +104,10 @@ const App: React.FC<any> = ({ togle }) => {
             </div>
           </div>
         </Bottom>
-        <h1>Cheers to the Weekend </h1>
+        {/* <div className="text"> */}
+          <h1>Cheers to the Weekend </h1>
+          <span>See More</span>
+        {/* </div> */}
 
         <Bottom className="bot">
           <div className="playlist">

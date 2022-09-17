@@ -15,7 +15,7 @@ export const Board = styled.div`
     background: #0f0f0f;
     z-index: 11;
     top: 0;
-    padding-top: 1em;
+    padding: 1em 0 .4em;
     .profile {
       display: none;
       height: 49px;
@@ -107,6 +107,12 @@ export const Main = styled.div`
   margin-top: 6em;
   width: 100%;
 
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -2em;
+  }
   h1 {
     font-family: "Bw Modelica";
     font-style: normal;
@@ -116,6 +122,31 @@ export const Main = styled.div`
     letter-spacing: 0.04em;
     color: #ffffff;
     margin: 1em 0 2em 0.5em;
+  }
+  span {
+    font-family: "Bw Modelica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: rgba(217, 217, 217, 0.9);
+    margin-right: 1em;
+    display: none;
+  }
+
+  @media (max-width: 500px) {
+    h1 {
+      font-weight: 700;
+      font-size: 20px;
+      margin: 1em 0 1em 0.5em;
+      line-height: 24px;
+    }
+    span {
+      display: block;
+      width: 100px;
+      margin-left: auto;
+    }
   }
 `;
 
@@ -141,6 +172,13 @@ export const Top = styled.div`
     width: 387px;
     height: 112px;
   }
+
+  @media(max-width: 500px){
+    .pic1, .pic2{
+      display: none;
+
+    }
+  }
 `;
 
 export const Bottom = styled.div`
@@ -149,17 +187,8 @@ export const Bottom = styled.div`
   &.bot {
     margin-bottom: 4em;
   }
+ 
 
-  // h1 {
-  //   font-family: "Bw Modelica";
-  //   font-style: normal;
-  //   font-weight: 700;
-  //   font-size: 28px;
-  //   line-height: 34px;
-  //   letter-spacing: 0.04em;
-  //   color: #ffffff;
-  //   margin: 1em 0 1em ;
-  // }
 
   .playlist {
     display: flex;
