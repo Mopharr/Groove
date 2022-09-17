@@ -1,80 +1,115 @@
 import styled from "styled-components";
 
 export const Board = styled.div`
-    position: relative;
-    left: 295px;
+  position: relative;
+  left: 295px;
   width: calc(100% - 295px);
-//   padding 1em;
+  //   padding 1em;
 
-    nav{
+  nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
-    background: #0F0F0F;
+    background: #0f0f0f;
     z-index: 11;
     top: 0;
     padding-top: 1em;
-        
-        .arrow{
-            margin-right: 2em;
-            .icon {
-                color: #d9d9d9;
-                width: 48px;
-                font-size: 40px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-            .icon:hover{
-                color: #fbba12;
-                transition: all 0.3s ease;
-            }
-        }
-        .input{
-            width: 471px;
-            height: 56px;
-            border: 1px solid #0F0F0F;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            transition: all 0.3s ease;
-            cursor: pointer;
-
-            .icon{
-                color: #D9D9D9;
-                font-size: 20px;
-                width: 60px;
-            }
-            
-            input{
-                background: transparent;
-                height: 100%;
-                width: calc(100% - 60px);
-                border: none;
-                outline: none;
-                color: #d9d9d9;
-            }
-            .input[placeholder]{
-                font-size: 19px;
-                color: #d9d9d9;
-            }
-        }
-        .input:hover{
-            border: 1px solid #d9d9d9;
-        }
-        .input:hover .icon{
-             color: #fbba12;
-            transition: all 0.3s ease;
-        }
-               
+    .profile {
+      display: none;
+      height: 49px;
+      width: 49px;
     }
-       
+
+    .arrowCap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .arrow {
+      margin-right: 2em;
+
+      .icon {
+        color: #d9d9d9;
+        width: 48px;
+        font-size: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .icon:hover {
+        color: #fbba12;
+        transition: all 0.3s ease;
+      }
+    }
+    .input {
+      width: 471px;
+      height: 56px;
+      border: 1px solid #0f0f0f;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      .icon {
+        color: #d9d9d9;
+        font-size: 20px;
+        width: 60px;
+      }
+
+      input {
+        background: transparent;
+        height: 100%;
+        width: calc(100% - 60px);
+        border: none;
+        outline: none;
+        color: #d9d9d9;
+      }
+      .input[placeholder] {
+        font-size: 19px;
+        color: #d9d9d9;
+      }
+    }
+    .input:hover {
+      border: 1px solid #d9d9d9;
+    }
+    .input:hover .icon {
+      color: #fbba12;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .profile {
+        display: block;
+        margin-left: 1em;
+      }
+      .arrowCap {
+        display: none;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    left: 0;
+    width: 100%;
+
+    .hamburger {
+      display: block;
+      font-size: 30px;
+      color: #fff;
+      margin-right: 1em;
+    }
+  }
 `;
 
 export const Main = styled.div`
   margin-top: 6em;
-  width: 100%; 
+  width: 100%;
 
   h1 {
     font-family: "Bw Modelica";
@@ -115,6 +150,10 @@ export const Top = styled.div`
 export const Bottom = styled.div`
   margin: 1em 0;
 
+  &.bot{
+    margin-bottom: 4em;
+  }
+
   h1 {
     font-family: "Bw Modelica";
     font-style: normal;
@@ -123,7 +162,7 @@ export const Bottom = styled.div`
     line-height: 34px;
     letter-spacing: 0.04em;
     color: #ffffff;
-    margin: 1em 0 1em;
+    margin: 1em 0 1em .4em;
   }
 
   .playlist {
@@ -131,6 +170,7 @@ export const Bottom = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+
   .daily {
     width: 226.38px;
     height: 285.01px;
@@ -341,5 +381,42 @@ export const Bottom = styled.div`
     img {
       width: 100%;
     }
+  }
+
+  //   Media Query
+
+  @media (max-width: 1400px) {
+    ::-webkit-scrollbar {
+      width: 200px;
+    }
+    overflow-x: scroll;
+
+    .playlist {
+      width: 1440px;
+    }
+  }
+
+`;
+
+export const Footer = styled.div`
+  height: 108px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background: #000;
+  z-index: 111;
+  bottom: 0;
+  justify-content: space-around;
+  color: #fff;
+
+  .icon {
+    font-size: 30px;
+    transform: translate all 0.4s ease;
+    cursor: pointer;
+  }
+  .icon:hover {
+    color: #fbba12;
+    transform: translate all 0.4s ease;
   }
 `;

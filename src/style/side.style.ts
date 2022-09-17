@@ -8,14 +8,27 @@ export const Side = styled.div`
   overflow-y: scroll;
   position: fixed;
   left: 0;
+  transition: all 0.4s ease;
+  background: #000;
+  z-index: 1111;
 
   nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 90%;
     margin: auto;
 
+    .profilePic {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .icon {
+      font-size: 21px;
+      display: none;
+      cursor: pointer;
+    }
     img {
       width: 62px;
       height: 62px;
@@ -31,8 +44,44 @@ export const Side = styled.div`
     }
   }
 
+  /* width */
   ::-webkit-scrollbar {
-    width: 3px;
+    width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: yello;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+  }
+
+  @media (max-width: 1000px) {
+    margin-left: -295px;
+    background: #000;
+
+    &.active {
+      margin-left: 0px !important;
+      width: 100%;
+      z-index: 1111;
+      background: #000;
+      transition: all 0.4s ease;
+    }
+    nav {
+      .icon {
+        display: block;
+      }
+    }
   }
 `;
 
@@ -63,6 +112,14 @@ export const List = styled.div`
   li:hover {
     color: #fbba12;
     transition: all 0.3s ease;
+  }
+  .icon2 {
+    display: none;
+    font-size: 21px;
+    margin-left: 0.6em;
+  }
+  li:hover > .icon2 {
+    display: block;
   }
   span {
     font-family: "Bw Modelica";
