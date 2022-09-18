@@ -75,6 +75,8 @@ export const Board = styled.div`
       border: 1px solid #d9d9d9;
     }
 
+    // navbar media query 
+
     @media (max-width: 768px) {
       .profile {
         display: block;
@@ -89,6 +91,8 @@ export const Board = styled.div`
     display: none;
     cursor: pointer;
   }
+
+  // Board media query
 
   @media (max-width: 1000px) {
     left: 0;
@@ -135,6 +139,8 @@ export const Main = styled.div`
     display: none;
   }
 
+  // Main media query 
+
   @media (max-width: 500px) {
     h1 {
       font-weight: 700;
@@ -172,6 +178,9 @@ export const Top = styled.div`
     width: 387px;
     height: 112px;
   }
+
+
+  // Top media query 
 
   @media(max-width: 500px){
     .pic1, .pic2{
@@ -408,7 +417,7 @@ export const Bottom = styled.div`
     }
   }
 
-  //   Media Query
+  // Bottom  Media Query
 
   @media (max-width: 1400px) {
     ::-webkit-scrollbar {
@@ -424,6 +433,8 @@ export const Bottom = styled.div`
 
 export const Footer = styled.div`
   display: none;
+
+  // Footer media query
 
   @media (max-width: 500px) {
     display: block;
